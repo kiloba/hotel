@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -10,6 +11,8 @@ import { Pagina2Component } from './paginas/pagina2/pagina2.component';
 import { Pagina3Component } from './paginas/pagina3/pagina3.component';
 import { Pagina4Component } from './paginas/pagina4/pagina4.component';
 import { Pagina5Component } from './paginas/pagina5/pagina5.component';
+import {HttpClientModule} from '@angular/common/http';
+import { Pagina6Component } from './paginas/pagina6/pagina6.component';
 
 @NgModule({
   declarations: [
@@ -20,11 +23,15 @@ import { Pagina5Component } from './paginas/pagina5/pagina5.component';
     Pagina2Component,
     Pagina3Component,
     Pagina4Component,
-    Pagina5Component
+    Pagina5Component,
+    Pagina6Component,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

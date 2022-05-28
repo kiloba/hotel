@@ -1,9 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "dffd5680-78c9-4e9e-9580-8c88c614e8f2"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "hotel": {
+    "angularcrud": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/hotel",
+            "outputPath": "dist/angularcrud",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -68,10 +71,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "hotel:build:production"
+              "browserTarget": "angularcrud:build:production"
             },
             "development": {
-              "browserTarget": "hotel:build:development"
+              "browserTarget": "angularcrud:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +82,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "hotel:build"
+            "browserTarget": "angularcrud:build"
           }
         },
         "test": {
@@ -102,5 +105,5 @@
       }
     }
   },
-  "defaultProject": "hotel"
+  "defaultProject": "angularcrud"
 }
